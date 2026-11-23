@@ -11,11 +11,15 @@
 //   6-76 times per day and lose money on BOTH test windows: the dev window
 //   (22-23 Nov, BTC +3.64%) and the previous race's dev window (14-15 Nov,
 //   BTC -4.01%). See the notes folder's search logs for the numbers.
-// - This rider trades once per window: dev +21.00 USDC (1 trade, max
-//   drawdown 1.98%) and previous window +3.08 USDC (1 trade, max drawdown
-//   2.60%). Both windows positive, both drawdowns far under the 25%
-//   guardrail. The 4-hour lookback is long enough that a single leg of the
-//   market, not minute noise, triggers the entry.
+// - This rider trades once per window: dev +20.998407 USDC (1 trade, max
+//   drawdown 1.98%, fees 0.808563) and previous window +3.079422 USDC
+//   (1 trade, max drawdown 2.60%, fees 0.801393), both measured with the
+//   kit's grade-local on the real bot (result_sha256 dev
+//   850066b957728fedc54fcd9cce7f5395988df0c817ac3a16166da5053f0b4056,
+//   identical across two separate runs). Both windows positive, both
+//   drawdowns far under the 25% guardrail. The 4-hour lookback is long
+//   enough that a single leg of the market, not minute noise, triggers
+//   the entry.
 // - The trailing stop (400 bps from peak equity) never fired on either test
 //   window; it is insurance against a sharp reversal in the unseen live
 //   window, not a tuned parameter.
